@@ -1,0 +1,198 @@
+@import './utils/variables.css';
+body {
+    margin: 0;
+    background: url(./assets/img/background1.jpg);
+    color: var(--color-brown);
+}
+
+.page {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    min-width: min-content;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}
+
+.button--brown {
+    background-color: var(--color-brown);
+    border-radius: 50%;
+    margin: 5px 1rem;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 10px;
+    color: var(--color-beige);
+    cursor: pointer;
+}
+
+.button--brown:hover {
+    background-color: var(--color-light-brown);
+}
+
+.button--beig {
+    background-color: var(--color-beige);
+    margin: 0px 0 0 3rem;
+    padding: 3px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.button--beig:hover {
+    background-color: var(--color-lightbeig);
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px inset var(--color-brown);
+    margin: 20px 30px;
+}
+
+.titleForm {
+    font-family: var(--font-titles);
+    background-color: var(--color-brown);
+    color: var(--color-beige);
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.formComponent {
+    background-color: var(--color-beige);
+    max-width: max-content;
+    margin: 1rem auto;
+    border-radius: 8px;
+    border: 2px solid var(--color-brown);
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-titles);
+    color: var(--color-brown);
+}
+
+.fieldsetForm {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid var(--color-brown);
+    background-color: var(--color-beige);
+}
+
+.legendForm {
+    font-size: 18px;
+}
+
+.inputLabel {
+    background-color: var(--color-lightbeig);
+    border-radius: 4px;
+    border: 1px solid var(--color-brown);
+    padding: 2px;
+    margin: 5px;
+}
+
+.textarea {
+    background-color: var(--color-lightbeig);
+    color: var(--color-brown);
+    border-radius: 8px;
+    border: 2px solid var(--color-brown);
+    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.link {
+    color: var(--color-brown);
+    padding: 0.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.loading {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    left: 2rem;
+    top: 5rem;
+}
+
+@media (min-width: 500px) {
+    .button--brown {
+        font-size: 14px;
+    }
+    .titleForm {
+        font-size: 35px;
+    }
+    .form {
+        min-width: 380px;
+        font-size: 18px;
+    }
+    .fieldsetForm {
+        margin: 10px;
+        padding: 10px;
+    }
+    .legendForm {
+        font-size: 24px;
+    }
+    .textarea {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 700px) {
+    .button--brown {
+        font-size: 16px;
+    }
+    .titleForm {
+        font-size: 50px;
+    }
+    .form {
+        min-width: 600px;
+        font-size: 24px;
+    }
+    .fieldsetForm {
+        margin: 20px;
+        padding: 20px;
+    }
+    .legendForm {
+        font-size: 30px;
+    }
+    .inputLabel {
+        padding: 3px;
+        margin: 5px;
+    }
+    .textarea {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 900px) {
+    .titleForm {
+        font-size: 60px;
+    }
+    .form {
+        min-width: 750px;
+        font-size: 28px;
+    }
+    .legendForm {
+        font-size: 40px;
+    }
+    .textarea {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .form {
+        max-width: 1000px;
+    }
+}

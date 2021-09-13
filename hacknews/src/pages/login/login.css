@@ -1,0 +1,8 @@
+.loginForm {
+    margin: 100px auto;
+    max-width: max-content;
+    display: flex;
+    font-family: var(--font-titles);
+    color: var(--color-brown);
+    text-align: center;
+}

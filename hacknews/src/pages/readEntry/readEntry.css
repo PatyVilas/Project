@@ -1,0 +1,102 @@
+.readComponent {
+    max-width: max-content;
+    background-color: var(--color-beige);
+    font-family: var(--font-titles);
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.readCard {
+    max-width: min-content;
+}
+
+.readTitle {
+    padding-top: 1rem;
+    font-size: 20px;
+}
+
+.readLead {
+    font-size: 14px;
+    padding: 0 1rem;
+}
+
+.readInfo {
+    padding: 0 1rem;
+}
+
+.readPhoto {
+    max-width: 300px;
+    max-height: 350px;
+}
+
+.entryOptions {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.optionsIcon {
+    background-color: var(--color-beigerbga);
+    border-radius: 8px;
+    max-width: 30px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@media (min-width: 500px) {
+    .readTitle {
+        font-size: 22px;
+    }
+    .readLead {
+        font-size: 16px;
+    }
+    .readPhoto {
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .optionsIcon {
+        max-width: 40px;
+    }
+}
+
+@media (min-width: 700px) {
+    .readTitle {
+        font-size: 24px;
+    }
+    .readLead {
+        font-size: 18px;
+    }
+    .readInfo {
+        font-size: 18px;
+    }
+    .readPhoto {
+        max-width: 700px;
+        max-height: 700px;
+    }
+    .optionsIcon {
+        max-width: 40px;
+    }
+}
+
+@media (min-width: 900px) {
+    .readPhoto {
+        width: 1000px;
+        max-height: 500px;
+    }
+    .readCard {
+        font-size: 18px;
+    }
+    .optionsIcon {
+        max-width: 50px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .readTitle {
+        font-size: 28px;
+    }
+    .readPhoto {
+        max-width: 1100px;
+        max-height: 600px;
+    }
+}

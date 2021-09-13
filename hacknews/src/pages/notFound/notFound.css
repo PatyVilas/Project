@@ -1,0 +1,74 @@
+.notFoundComponent {
+    margin: 2rem 0;
+    max-width: auto;
+    background-color: var(--color-beigerbga);
+    font-family: var(--font-titles);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.numDiv {
+    margin: 1rem auto;
+    display: flex;
+    position: relative;
+}
+
+.numImg {
+    max-width: 100px;
+}
+
+.plugImg {
+    max-width: 150px;
+}
+
+@media (min-width: 500px) {
+    .notFoundComponent {
+        font-size: 22px;
+    }
+    .numImg {
+        max-width: 150px;
+    }
+    .plugImg {
+        max-width: 150px;
+    }
+}
+
+@media (min-width: 700px) {
+    .notFoundComponent {
+        font-size: 24px;
+    }
+    .numDiv {
+        margin: 2rem auto;
+    }
+    .numImg {
+        max-width: 200px;
+    }
+    .plugImg {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 900px) {
+    .notFoundComponent {
+        font-size: 24px;
+    }
+    .numImg {
+        max-width: 200px;
+    }
+    .plugImg {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .notFoundComponent {
+        font-size: 26px;
+    }
+    .numImg {
+        max-width: 250px;
+    }
+    .plugImg {
+        max-width: 250px;
+    }
+}

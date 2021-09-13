@@ -1,0 +1,76 @@
+.modal {
+    background-color: var(--color-brownrgba);
+    display: none;
+    position: fixed;
+    padding: 20px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.modalContent {
+    max-width: max-content;
+    padding: 10px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.modalDiv {
+    max-width: 300px;
+    background-color: var(--color-lightbeig);
+    border-radius: 8px;
+}
+
+.modalShare {
+    display: flex;
+    flex-direction: column;
+}
+
+.shareIcon {
+    max-width: 30px;
+    margin: 0 1rem;
+}
+
+.modalIcons {
+    display: flex;
+}
+
+.buttonClose {
+    color: var(--color-beige);
+    background-color: var(--color-brownrgba);
+    font-family: var(--font-titles);
+    font-size: x-large;
+    font-weight: 600;
+    cursor: pointer;
+    left: 10rem;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.modal.is-open {
+    display: flex;
+}
+
+@media (min-width: 500px) {
+    .buttonClose {
+        left: 14rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .buttonClose {
+        left: 20rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .buttonClose {
+        left: 26rem;
+    }
+    .modalDiv {
+        max-width: 500px;
+    }
+}

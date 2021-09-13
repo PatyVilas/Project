@@ -1,0 +1,187 @@
+.cardList {
+    margin: 0 0 0 auto;
+    padding: 0;
+    background-color: var(--color-beige);
+    font-family: var(--font-titles);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    height: max-content;
+}
+
+.cardEntry {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.cardDescription {
+    position: relative;
+}
+
+.cardTitle {
+    background-color: var(--color-brownrgba);
+    font-size: 8px;
+    border-radius: 4px;
+    padding: 0 4px;
+    position: absolute;
+    right: 10px;
+    color: var(--color-lightbeig);
+}
+
+.cardLead {
+    position: absolute;
+    background-color: var(--color-brownrgba);
+    color: var(--color-lightbeig);
+    border-radius: 4px;
+    font-size: 8px;
+    max-width: 600px;
+    padding: 0 2px;
+    top: 5rem;
+    left: 0.5rem;
+    right: 0.5rem;
+}
+
+.cardPhoto {
+    margin: 0;
+    width: auto;
+    width: 200px;
+    max-height: 150px;
+}
+
+.cardItems {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cardIcon {
+    width: 20px;
+    cursor: pointer;
+}
+
+.cardIcon:hover {
+    width: 23px;
+}
+
+.cardIconLike {
+    background-color: var(--color-beigerbga);
+    border-radius: 8px;
+    margin: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+}
+
+#like {
+    padding: 2px;
+    margin: 5px 0;
+}
+
+#noLike {
+    transform: rotate(180deg);
+    padding: 2px;
+    margin: 5px 0;
+}
+
+@media (min-width: 500px) {
+    .cardList {
+        font-size: 14px;
+    }
+    .cardTitle {
+        font-size: 12px;
+    }
+    .cardLead {
+        font-size: 12px;
+        top: 8rem;
+    }
+    .cardPhoto {
+        width: 300px;
+        max-height: 200px;
+    }
+    .cardIcon {
+        width: 25px;
+    }
+    .cardIcon:hover {
+        width: 28px;
+    }
+}
+
+@media (min-width: 700px) {
+    .cardList {
+        font-size: 16px;
+    }
+    .cardTitle {
+        font-size: 16px;
+    }
+    .cardLead {
+        font-size: 12px;
+        top: 11rem;
+    }
+    .cardPhoto {
+        width: 500px;
+        max-height: 250px;
+    }
+    .cardIcon {
+        width: 30px;
+    }
+    .cardIcon:hover {
+        width: 32px;
+    }
+}
+
+@media (min-width: 900px) {
+    .cardList {
+        font-size: 20px;
+    }
+    .cardTitle {
+        font-size: 18px;
+    }
+    .cardLead {
+        font-size: 14px;
+        top: 15rem;
+    }
+    .cardPhoto {
+        width: 600px;
+        max-height: 300px;
+    }
+    .cardIcon {
+        width: 30px;
+    }
+    .cardIcon:hover {
+        width: 35px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .cardList {
+        font-size: 22px;
+    }
+    .cardPhoto {
+        width: 700px;
+    }
+    .cardLead {
+        top: 15rem;
+        right: 1rem;
+        left: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .cardList {
+        font-size: 24px;
+    }
+    .cardPhoto {
+        width: 800px;
+    }
+    .cardTitle {
+        font-size: 20px;
+    }
+    .cardLead {
+        font-size: 16px;
+        top: 25rem;
+    }
+}
