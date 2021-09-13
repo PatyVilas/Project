@@ -35,28 +35,28 @@
 
 ## EndPoints de noticias
 
--   **GET** - [/entries] - Retorna el listado de todas las noticias. ✏️
--   **GET** - [/entries/:idEntry] - Retorna una noticia en concreto. ✏️
--   **POST** - [/entries] - Crea una noticia nueva.✏️⌚
--   **POST** - [/entries/:idEntry/photos] - Añade una imagen a la noticia.✏️⌚
+-   **GET** - [/entries] - Retorna el listado de todas las noticias.
+-   **GET** - [/entries/:idEntry] - Retorna una noticia en concreto.
+-   **POST** - [/entries] - Crea una noticia nueva.
+-   **POST** - [/entries/:idEntry/photos] - Añade una imagen a la noticia.
 -   **POST** - [/entries/:idEntry/votes] - Valora positiva o negativamente una noticia.
--   **POST** - [/entries/:idEntry/report] - Reporta una noticia que puede resultar ofensiva o innadecuada.⌚
+-   **POST** - [/entries/:idEntry/report] - Reporta una noticia que puede resultar ofensiva o innadecuada.
 -   **POST** - [/entries/:idEntry/coment] - Dejar comentarios reelacionados con la noticia.
--   **PUT** - [/entries/:idEntry] - Editar la información de una noticia.⌚
--   **DELETE** - [/entries/:idEntry/photos/:idPhoto] - Elimina una foto de una noticia.✏️
+-   **PUT** - [/entries/:idEntry] - Editar la información de una noticia.
+-   **DELETE** - [/entries/:idEntry/photos/:idPhoto] - Elimina una foto de una noticia.
 -   **DELETE** - [/entries/:idEntry] - Elimina la noticia.
 
 ## EndPoints de usuarios
 
--   **GET** - [/users/:idUser] - Retorna información de un usuario en concreto.✏️
--   **POST** - [/users] - Crea un nuevo usuario pendiente de activar.✏️
+-   **GET** - [/users/:idUser] - Retorna información de un usuario en concreto.
+-   **POST** - [/users] - Crea un nuevo usuario pendiente de activar.
 -   **GET** - [/users/validate/:registrationCode] - Valida un usuario recién registrado.
--   **POST** - [/users/login] - Logea un usuario retornando un token. ✏️⌚
+-   **POST** - [/users/login] - Logea un usuario retornando un token.
 -   **PUT** - [/users/:idUser] - Edita los datos pertenecientes a un usuario.
--   **PUT** - [/users/:idUser/password] - Edita la contraseña de un usuario.✏️⌚
+-   **PUT** - [/users/:idUser/password] - Edita la contraseña de un usuario.
 -   **PUT** - [/users/password/recover] - Envia un correo con el código de reseteo de contraseña al email de registro del usuario.
--   **PUT** - [/users/password/reset] - Cambia la contraseña de un usuario.✏️⌚
--   **DELETE** - [/users/:idUser] - Elimina un usuario.✏️⌚
+-   **PUT** - [/users/password/reset] - Cambia la contraseña de un usuario.
+-   **DELETE** - [/users/:idUser] - Elimina un usuario.
 
 
 
