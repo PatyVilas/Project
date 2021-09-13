@@ -11,7 +11,7 @@ const editEntry = async(req, res, next) => {
         //await validate(editEntrySchema, req.params);
 
         const { idEntry } = req.params;
-        const { place, title, theme, lead, description } = req.body;
+        let { place, title, theme, lead, description } = req.body;
 
         if (!place && !title && !theme && !lead && !description) {
             const error = new Error('Faltan campos de la noticia');

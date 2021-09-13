@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useModal from '../../utils/hooks/useModal';
 import DeleteModal from '../deleteModal/DeleteModal';
 import Modal from '../modal/Modal';
@@ -7,12 +7,11 @@ import Delete from '../../assets/img/delete.svg';
 
 export default function EntryOptions({ entry }) {
 	const [isOpenDelete, openModalDelete, closeModalDelete] = useModal(false);
-	const { idEntry } = useParams();
 
 	return (
 		<div className='entryOptions'>
 			<div>
-				<Link to={`/editEntry/${idEntry}`}>
+				<Link to={`/editEntry/${entry.id}`}>
 					<img className='optionsIcon' src={Edit} alt='edit' />
 				</Link>
 			</div>
@@ -24,7 +23,7 @@ export default function EntryOptions({ entry }) {
 					onClick={openModalDelete}
 				/>
 				<Modal isOpen={isOpenDelete} closeModal={closeModalDelete}>
-					<DeleteModal entry={entry} />
+					<DeleteModal entry={entry} closeModal={closeModalDelete} />
 				</Modal>
 			</div>
 		</div>

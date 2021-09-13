@@ -1,9 +1,18 @@
 .photo-input {
     display: none;
+    max-width: 70px;
+    height: 50px;
+    margin: 0;
 }
 
 .photo-list {
     display: flex;
+    margin: 1rem;
+}
+
+.photoEntry {
+    max-width: 70px;
+    height: 50px;
 }
 
 .entryComponent {
@@ -13,28 +22,28 @@
     border-radius: 8px;
     border: 3px solid var(--color-brown);
     max-width: 300px;
-    max-height: 450px
+    max-height: 550px
 }
 
 .entryCard {
     background-color: var(--color-beige);
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    max-width: 240px;
 }
 
 .entryDiv {
     background-color: var(--color-lightbeig);
     display: flex;
-    max-width: 80px;
+    max-width: 50px;
     flex-direction: column;
     position: relative;
     bottom: 16rem;
-    left: 13rem;
+    left: 14rem;
 }
 
 .entryIcon {
-    width: 40px;
+    width: 30px;
     margin: 2px 2px 0 2px;
     padding: 5px 10px 0 10px;
 }
@@ -42,7 +51,7 @@
 .entryButton {
     background-color: var(--color-brown);
     border-radius: 50%;
-    margin: 1rem 1rem 5rem 1rem;
+    margin: 1rem 0;
     padding: 3px 10px;
     text-align: center;
     font-size: 10px;
@@ -71,10 +80,15 @@
 
 @media (min-width: 500px) {
     .entryComponent {
-        max-width: 450px;
+        max-width: 500px;
+        max-height: 600px;
     }
     .entryCard {
-        max-width: 450px;
+        max-width: 400px;
+    }
+    .photoEntry {
+        max-width: 100px;
+        height: 70px;
     }
     .addIcon {
         width: 40px;
@@ -84,7 +98,7 @@
     .entryDiv {
         max-width: 60px;
         bottom: 16rem;
-        left: 24rem;
+        left: 26rem;
     }
     .entryIcon {
         width: 30px;
@@ -97,10 +111,14 @@
 @media (min-width: 700px) {
     .entryComponent {
         max-width: 700px;
-        max-height: 600px;
+        max-height: 700px;
     }
     .entryCard {
         max-width: 600px;
+    }
+    .photoEntry {
+        max-width: 200px;
+        height: 100px;
     }
     .addIcon {
         width: 60px;
@@ -124,16 +142,20 @@
 
 @media (min-width: 900px) {
     .entryComponent {
-        max-width: 900px;
-        max-height: 700px;
+        max-width: 850px;
+        max-height: 850px;
     }
     .entryCard {
-        max-width: 800px;
+        max-width: 750px;
+    }
+    .photoEntry {
+        max-width: 200px;
+        height: 150px;
     }
     .entryDiv {
         max-width: 90px;
         bottom: 22rem;
-        left: 48rem;
+        left: 47rem;
     }
     .addIcon {
         width: 70px;

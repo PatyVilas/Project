@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import CardItems from '../cardItems/CardItems';
 import IconsLike from '../iconsLike/IconsLike';
 import { Loading } from '../Loading';
+import useLog from '../../utils/hooks/useLog';
 
 function Card({ entries, loading }) {
+	const { idUser } = useLog();
 	if (loading) return <Loading />;
 	if (!entries) return null;
 
@@ -16,7 +18,9 @@ function Card({ entries, loading }) {
 			<h1>Noticias</h1>
 			{entries.map((entry) => (
 				<div key={entry.id}>
-					<IconsLike entry={entry} />
+					{entry.idUser !== idUser ? (
+						<IconsLike entry={entry} />
+					) : null}
 					<div className='cardEntry'>
 						<Link to={`/entries/${entry.id}`}>
 							<div>

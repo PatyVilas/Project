@@ -8,26 +8,28 @@ const addAvatar = async (req, res, next) => {
     try {
         connection = await getDB();
 
-        const { idUser } = req.params;
+        const { idUser } = req.userAuth;
 
-        const [avatar] = await connection.query(`
-            SELECT avatar FROM users WHERE id = ?;
-        `, [idUser]);
-
-        
-        if (req.file && req.files.avatar) {
-            avatar = await savePhoto(req.files.photo);
-            await connection.query(`
+		if (req.files && req.files.avatar) {
+			const avatar = await savePhoto(req.files.avatar);
+			await connection.query(
+				`
                 UPDATE users SET avatar = ?, modifiedAt = ? WHERE id = ?;
-            `, [avatar, new Date()]);
-        }
+            `,
+				[avatar, new Date(), idUser]
+			);
+
+			res.send({
+				status: 'ok',
+				data: {
+					avatar,
+				},
+			});
+		} else {
+			throw new Error('No se subió ninguna imagen');
+		}
         
-        res.send({
-            status: 'ok',
-            data: {
-                avatar,
-            }
-        })
+        
         
     } catch (error) {
         next(error);

@@ -30,11 +30,10 @@ function NewEntry() {
 		try {
 			e.preventDefault();
 			setError('');
+
 			if (!theme || !place || !title || !lead || !description) {
 				throw new Error('Todos los campos son Obligatorios');
 			}
-
-			//enviar los datos de la entrada
 
 			try {
 				const response = await axios('http://localhost:4000/entries', {
@@ -51,10 +50,9 @@ function NewEntry() {
 					},
 				});
 
-				// y recoger el id con el que fue creada
 				const { id } = response.data.data;
 				const idEntry = id;
-				// creamos el array de fotos manualmente que queremos subir y descarto los nulos
+
 				const photos = [photo1, photo2, photo3].filter(
 					(photo) => photo !== null
 				);
@@ -117,7 +115,7 @@ function NewEntry() {
 								<button
 									className='entryButton'
 									onClick={() => setPhoto1(null)}>
-									Delete photo
+									Delete
 								</button>
 							) : null}
 						</div>
@@ -145,7 +143,7 @@ function NewEntry() {
 								<button
 									className='entryButton'
 									onClick={() => setPhoto2(null)}>
-									Delete photo
+									Delete
 								</button>
 							) : null}
 						</div>
@@ -173,7 +171,7 @@ function NewEntry() {
 								<button
 									className='entryButton'
 									onClick={() => setPhoto3(null)}>
-									Delete photo
+									Delete
 								</button>
 							) : null}
 						</div>
@@ -276,7 +274,7 @@ function NewEntry() {
 								</div>
 								<div>
 									<Link to='/' className='entryButton'>
-										Volver
+										Back
 									</Link>
 								</div>
 							</div>

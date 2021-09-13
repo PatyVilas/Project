@@ -11,7 +11,7 @@ import EntryOptions from '../../components/entryOptions/EntryOptions';
 function ReadEntry() {
 	const [entry, setEntry] = useState();
 	const { idEntry } = useParams();
-	const { isLogged } = useLog();
+	const { isLogged, idUser } = useLog();
 
 	useEffect(() => {
 		const getEntry = async () => {
@@ -37,7 +37,10 @@ function ReadEntry() {
 				<div className='readCard'>
 					<h1 className='readTitle'>{entry.title}</h1>
 					<h3 className='readLead'>{entry.lead}</h3>
-					<IconsLike entry={entry} />
+					{entry.idUser !== idUser ? (
+						<IconsLike entry={entry} />
+					) : null}
+
 					{entry.photos.map((photo) => (
 						<img
 							key={photo.id}

@@ -16,12 +16,13 @@ const voteEntry = async(req, res, next) => {
         const { idUser } = req.userAuth;
         const { idEntry } = req.params;
         const { vote } = req.body;
+        const validVotes = [-1, 1];
 
-        if (vote !== 0 || vote !== 1) {
-            const error = new Error('El voto debe ser positivo o negativo');
-            error.httpStatus = 400;
-            throw error;
-        }
+		if (!validVotes.includes(vote)) {
+			const error = new Error('El voto debe ser 1 o -1');
+			error.httpStatus = 400;
+			throw error;
+		}
 
         const [owner] = await connection.query(`
             SELECT idUser FROM entries WHERE id = ?;

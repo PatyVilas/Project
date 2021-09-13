@@ -63,7 +63,11 @@ function Profile() {
 							onClick={openModalAdd}
 						/>
 						<Modal isOpen={isOpenAdd} closeModal={closeModalAdd}>
-							<AddAvatar />
+							<AddAvatar
+								closeModal={closeModalAdd}
+								user={user}
+								setUser={setUser}
+							/>
 						</Modal>
 					</div>
 				</div>

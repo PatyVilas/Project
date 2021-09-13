@@ -1,7 +1,7 @@
 import axios from 'axios';
 import useLog from '../../utils/hooks/useLog';
 
-export default function DeleteModal({ entry }) {
+export default function DeleteModal({ entry, closeModal }) {
 	const idEntry = entry.id;
 	const { token } = useLog();
 
@@ -28,6 +28,7 @@ export default function DeleteModal({ entry }) {
 		};
 
 		deleteEntry();
+		closeModal();
 	}
 	return (
 		<div className='formComponent' onSubmit={onSubmit}>

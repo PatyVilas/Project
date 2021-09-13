@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import useLog from '../../utils/hooks/useLog';
 import Add from '../../assets/img/addImg.svg';
 
-export default function AddAvatar() {
+export default function AddAvatar({ user, setUser, closeModal }) {
 	const { token, idUser, isLogged } = useLog();
 	const [avatar, setAvatar] = useState(null);
 	const history = useHistory();
@@ -34,11 +34,13 @@ export default function AddAvatar() {
 					data: payload,
 				}
 			);
-			console.log(res);
-			setAvatar(avatar);
-			if (res.status === 200) {
-				history.push(`/users/${idUser}`);
-			}
+
+			setUser({
+				...user,
+				avatar: res.data.data.avatar,
+			});
+
+			closeModal();
 		} catch (error) {
 			console.error(error);
 			throw new Error('Error del servidor inténtalo de nuevo más tarde');

@@ -38,7 +38,10 @@ const getUser = async(req, res, next) => {
 
         };
 
-        const [news] = await connection.query(`SELECT * FROM entries WHERE idUser=?`, [idUser])
+        const [news] = await connection.query(
+			`SELECT entries.*, photos.photo FROM entries LEFT JOIN photos ON photos.idEntry=entries.id WHERE idUser=?`,
+			[idUser]
+		);
 
         res.send({
             status: 'ok',
