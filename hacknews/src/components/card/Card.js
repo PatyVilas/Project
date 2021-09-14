@@ -7,7 +7,7 @@ import { Loading } from '../Loading';
 import useLog from '../../utils/hooks/useLog';
 
 function Card({ entries, loading }) {
-	const { idUser } = useLog();
+	const { idUser, isLogged } = useLog();
 	if (loading) return <Loading />;
 	if (!entries) return null;
 
@@ -18,7 +18,7 @@ function Card({ entries, loading }) {
 			<h1>Noticias</h1>
 			{entries.map((entry) => (
 				<div key={entry.id}>
-					{entry.idUser !== idUser ? (
+					{entry.idUser !== idUser && isLogged ? (
 						<IconsLike entry={entry} />
 					) : null}
 					<div className='cardEntry'>

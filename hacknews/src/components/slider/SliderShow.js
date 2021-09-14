@@ -7,59 +7,55 @@ function SliderShow({children }) {
     const interval = useRef(null);
 
     const nextItem = useCallback(() => {
-        console.log("next");
-        const firstItem = slider.current.children[0];
-        
-        if (slider.current.children.length > 0) {
+		if (slider.current.children.length > 0) {
+			slider.current.children[0].style.transition = `500ms ease-out all`;
+			slider.current.children[0].style.transform = 'translateX(-1px)';
 
-            firstItem.style.transition = `500ms ease-out all`;
-            firstItem.style.transform = 'translateX(-1px)';
-            
-            const transition = () => {
-                firstItem.style.transition = 'none';
-                firstItem.style.transform = 'translateX(1px)';
+			const transition = () => {
+				slider.current.children[0].style.transition = 'none';
+				slider.current.children[0].style.transform = 'translateX(1px)';
 
-                slider.current.appendChild(firstItem);
+				slider.current.appendChild(slider.current.children[0]);
 
-                slider.current.removeEventListener('transitionend', transition);
-            }
-            slider.current.addEventListener('transitionend', transition);
-        }
-    }, []);
+				slider.current.removeEventListener('transitionend', transition);
+			};
+			slider.current.addEventListener('transitionend', transition);
+		}
+	}, []);
 
-    const previousItem = () => {
-        console.log("previous");
-        const index = slider.current.children.length - 2;
-        const lastItem = slider.current.children[index];
-    
-        if (slider.current.children.length > 0) {
+	const previousItem = () => {
+		const index = slider.current.children.length - 2;
 
-            slider.current.insertBefore(lastItem, slider.current.firstChild);
-            lastItem.style.transition = 'none';
-            lastItem.style.transform = 'translateX(1px)';
+		if (slider.current.children.length > 1) {
+			slider.current.insertBefore(
+				slider.current.children[index],
+				slider.current.firstChild
+			);
+			slider.current.children[index].style.transition = 'none';
+			slider.current.children[index].style.transform = 'translateX(1px)';
 
-            setTimeout(() => {
-                lastItem.style.transition = '300ms ease-out all';
-                lastItem.style.transform = 'translateX(1px)';
-            }, 30);
-        }
-    }
+			setTimeout(() => {
+				slider.current.children[index].style.transition =
+					'300ms ease-out all';
+				slider.current.children[index].style.transform =
+					'translateX(1px)';
+			}, 30);
+		}
+	};
 
-    useEffect(() => {
-        interval.current = setInterval(() => {
-            nextItem();
-        }, 3600000);
-        slider.current.addEventListener('mouseenter', () => {
-            clearInterval(interval.current);
-        });
-        slider.current.addEventListener('mouseleave', () => {
-            interval.current = setInterval(() => {
-                nextItem();
-            }, 3600000);
-        });
-    
-        
-    }, [nextItem]);
+	useEffect(() => {
+		interval.current = setInterval(() => {
+			nextItem();
+		}, 360000);
+		slider.current.addEventListener('mouseenter', () => {
+			clearInterval(interval.current);
+		});
+		slider.current.addEventListener('mouseleave', () => {
+			interval.current = setInterval(() => {
+				nextItem();
+			}, 360000);
+		});
+	}, [nextItem]);
 
     return (
         <div>
