@@ -20,7 +20,7 @@ body {
 .button--brown {
     background-color: var(--color-brown);
     border-radius: 50%;
-    margin: 5px 1rem;
+    margin: auto 1rem;
     padding: 3px 10px;
     text-align: center;
     font-size: 10px;
@@ -34,7 +34,7 @@ body {
 
 .button--beig {
     background-color: var(--color-beige);
-    margin: 0px 0 0 3rem;
+    margin: auto auto auto 3rem;
     padding: 3px 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -178,6 +178,9 @@ body {
 @media (min-width: 900px) {
     .titleForm {
         font-size: 60px;
+    }
+    .button--brown {
+        margin: 6px 1rem;
     }
     .form {
         min-width: 750px;

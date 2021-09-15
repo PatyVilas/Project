@@ -21,8 +21,8 @@ function Header() {
 						<Link to='/newEntry'>
 							<img className='addEntry' src={Entry} alt='entry' />
 						</Link>
-						<Link to={`/users/${idUser}`}>
-							<div className='button--brown'>{userName}</div>
+						<Link to={`/users/${idUser}`} className='button--brown'>
+							{userName}
 						</Link>
 						<div onClick={logout} className='button--brown'>
 							LogOut

@@ -201,7 +201,7 @@ function RegistrationForm() {
 							type='submit'
 							value='Register'
 						/>
-						<Link to='users/login' className='button--brown'>
+						<Link to='/login' className='button--brown'>
 							Login
 						</Link>
 					</div>
@@ -215,13 +215,4 @@ function RegistrationForm() {
 
 export default RegistrationForm;
 
-/* function validateForm(userName, email, repEmail, password, repPassword) {
-	if (!email || !repEmail || !password || !repPassword || !userName) {
-		return 'El campo requerido es obligatorio';
-	}
-	const isValidPassword = password === repPassword;
-	if (!isValidPassword) {
-		return 'las contraseñas deben coincidir';
-	}
-}
- */
+
