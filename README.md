@@ -1,4 +1,4 @@
-# HACK NEWS!!
+# HACK NEWS
 
 -- Hack News se trata de una página web de noticias, donde visualizar las últimas publicaciones, hacer filtraciones por temas ver cuales son las noticias más valoradas por los usuarios.
 
